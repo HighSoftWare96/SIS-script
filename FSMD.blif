@@ -1,0 +1,102 @@
+.model FSMD_RPM
+.inputs INIT RESET RPM12 RPM11 RPM10 RPM9 RPM8 RPM7 RPM6 RPM5 RPM4 RPM3 RPM2 \
+RPM1 RPM0
+.outputs MOD1 MOD0 ALM NUMB7 NUMB6 NUMB5 NUMB4 NUMB3 NUMB2 NUMB1 NUMB0
+.latch    MU7 NUMB7 re NIL 0
+.latch    MU6 NUMB6 re NIL 0
+.latch    MU5 NUMB5 re NIL 0
+.latch    MU4 NUMB4 re NIL 0
+.latch    MU3 NUMB3 re NIL 0
+.latch    MU2 NUMB2 re NIL 0
+.latch    MU1 NUMB1 re NIL 0
+.latch    MU0 NUMB0 re NIL 0
+.latch    [347] LatchOut_v5   1
+.latch    [348] LatchOut_v6   1
+.latch    [349] LatchOut_v7   1
+.names INIT SA1 MOD1
+11 1
+.names INIT SA0 MOD0
+11 1
+.names NUMB7 NUMB6 NUMB5 NUMB4 NUMB3 NUMB2 MUX3 LatchOut_v7 [98] ALM
+1-----10- 1
+-1----10- 1
+--1---10- 1
+---1--10- 1
+----11101 1
+.names RPM12 RPM11 RPM10 RPM9 RPM8 RPM7 RPM6 RPM5 RPM4 SA1
+1-------- 1
+-1------- 1
+--111111- 1
+--11111-1 1
+.names RPM10 RPM9 RPM8 RPM7 RPM6 RPM5 SA1 MUX3 [90] SA0
+-------1- 1
+1-----0-- 1
+-1----0-- 1
+--1---0-- 1
+---1--0-- 1
+----1-0-- 1
+-----10-- 1
+------0-1 1
+.names RESET SA1 SA0 LatchOut_v7 LatchOut_v6 [97] START
+1----- 1
+-----0 1
+-0-0-- 1
+--0-0- 1
+--101- 1
+-1-10- 1
+.names RPM12 RPM11 RPM10 RPM9 RPM8 RPM7 RPM6 RPM5 [90] MUX3
+1-------- 1
+-111111-- 1
+-11111-11 1
+.names START NUMB7 NUMB6 MU6 MU7
+-1-1 1
+010- 1
+0010 1
+.names NUMB6 START [94] MU6
+101 1
+000 1
+.names START NUMB5 C2 MU5
+001 1
+010 1
+.names NUMB4 NUMB3 NUMB2 [98] C2
+1111 1
+.names NUMB4 NUMB3 START C2 MU3 MU4
+1-00- 1
+-1000 1
+.names START NUMB3 NUMB2 MU2 MU3
+-1-1 1
+010- 1
+0010 1
+.names NUMB2 START [98] MU2
+001 1
+100 1
+.names START NUMB1 MU0 MU1
+-11 1
+000 1
+.names START NUMB0 MU0
+00 1
+.names INIT RESET [97] [347]
+0-- 1
+-01 1
+.names [347] MOD0 [348]
+0- 1
+-0 1
+.names [347] MOD1 [349]
+0- 1
+-0 1
+.names RPM4 RPM3 RPM2 RPM1 RPM0 [90]
+1---- 1
+-1--- 1
+--1-- 1
+---1- 1
+----1 1
+.names NUMB5 C2 [94]
+0- 1
+-0 1
+.names LatchOut_v7 LatchOut_v6 LatchOut_v5 [97]
+0-- 1
+-0- 1
+--0 1
+.names NUMB1 NUMB0 [98]
+11 1
+.end

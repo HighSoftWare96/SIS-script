@@ -1,0 +1,168 @@
+.model FSM
+.inputs INIT RESET TS SA1 SA0
+.outputs MOD1 MOD0 ALM START
+.latch    [347] LatchOut_v5   1
+.latch    [348] LatchOut_v6   1
+.latch    [349] LatchOut_v7   1
+.start_kiss
+.i 5
+.o 4
+.p 29
+.s 5
+.r S1
+0---- S0 S1 00--
+10-00 S0 S1 00--
+10001 S0 S3 0101
+10010 S0 S4 1001
+10011 S0 S0 1100
+10111 S0 S0 1110
+110-- S0 S2 --01
+0---- S1 S1 00--
+1---- S1 S2 --01
+10011 S3 S0 1101
+10-00 S3 S1 00--
+0---- S3 S1 00--
+110-- S3 S2 --01
+10001 S3 S3 0100
+10010 S3 S4 1001
+10010 S4 S4 1000
+110-- S4 S2 --01
+10001 S4 S3 0101
+10-00 S4 S1 00--
+0---- S4 S1 00--
+10011 S4 S0 1101
+10-00 S4 S1 00--
+0---- S4 S1 00--
+10011 S2 S0 1100
+10001 S2 S3 0100
+10010 S2 S4 1000
+110-- S2 S2 --01
+10-00 S2 S1 00--
+0---- S2 S1 00--
+.end_kiss
+.latch_order LatchOut_v5 LatchOut_v6 LatchOut_v7
+.code S0 100
+.code S1 111
+.code S3 101
+.code S4 110
+.code S2 011
+.names INIT RESET [362] [347]
+0-- 1
+-01 1
+.names [347] MOD0 [348]
+0- 1
+-0 1
+.names [347] MOD1 [349]
+0- 1
+-0 1
+.names INIT SA1 MOD1
+11 1
+.names INIT SA0 MOD0
+11 1
+.names TS LatchOut_v7 ALM
+10 1
+.names RESET SA1 SA0 LatchOut_v6 LatchOut_v7 [362] START
+1----- 1
+-----0 1
+--00-- 1
+-0--0- 1
+-1-01- 1
+--110- 1
+.names LatchOut_v5 LatchOut_v6 LatchOut_v7 [362]
+0-- 1
+-0- 1
+--0 1
+.exdc 
+.inputs INIT RESET TS SA1 SA0 LatchOut_v5 LatchOut_v6 LatchOut_v7
+.outputs [347] [348] [349] MOD1 MOD0 ALM START
+.names INIT RESET TS SA1 SA0 LatchOut_v5 LatchOut_v6 LatchOut_v7 [347]
+-----00- 1
+-----0-0 1
+111--0-- 1
+1-11-0-- 1
+1-1-10-- 1
+111---0- 1
+111----0 1
+1-101-0- 1
+1-110-0- 1
+1-11--01 1
+1-1-1-01 1
+1-11--10 1
+1-1-1-10 1
+.names INIT RESET TS SA1 SA0 LatchOut_v5 LatchOut_v6 LatchOut_v7 [348]
+-----00- 1
+-----0-0 1
+111--0-- 1
+1-11-0-- 1
+1-1-10-- 1
+111---0- 1
+111----0 1
+1-101-0- 1
+1-110-0- 1
+1-11--01 1
+1-1-1-01 1
+1-11--10 1
+1-1-1-10 1
+.names INIT RESET TS SA1 SA0 LatchOut_v5 LatchOut_v6 LatchOut_v7 [349]
+-----00- 1
+-----0-0 1
+111--0-- 1
+1-11-0-- 1
+1-1-10-- 1
+111---0- 1
+111----0 1
+1-101-0- 1
+1-110-0- 1
+1-11--01 1
+1-1-1-01 1
+1-11--10 1
+1-1-1-10 1
+.names INIT RESET TS SA1 SA0 LatchOut_v5 LatchOut_v6 LatchOut_v7 MOD1
+11------ 1
+-----00- 1
+-----0-0 1
+1-101--- 1
+1-110--- 1
+1-11--1- 1
+1-1-1-1- 1
+1-11---1 1
+1-1-1--1 1
+1----111 1
+.names INIT RESET TS SA1 SA0 LatchOut_v5 LatchOut_v6 LatchOut_v7 MOD0
+11------ 1
+-----00- 1
+-----0-0 1
+1-101--- 1
+1-110--- 1
+1-11--1- 1
+1-1-1-1- 1
+1-11---1 1
+1-1-1--1 1
+1----111 1
+.names INIT RESET TS SA1 SA0 LatchOut_v5 LatchOut_v6 LatchOut_v7 ALM
+0------- 1
+--1--0-- 1
+-----00- 1
+-----0-0 1
+-11---0- 1
+--10--0- 1
+--1-0-0- 1
+--1---01 1
+--1---10 1
+-0-000-- 1
+-0-00-0- 1
+-0-00--0 1
+.names INIT RESET TS SA1 SA0 LatchOut_v5 LatchOut_v6 LatchOut_v7 START
+0------- 1
+--1--0-- 1
+-----00- 1
+-----0-0 1
+-11---0- 1
+--10--0- 1
+--1-0-0- 1
+--1---01 1
+--1---10 1
+-0-000-- 1
+-0-00-0- 1
+-0-00--0 1
+.end

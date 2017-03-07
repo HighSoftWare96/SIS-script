@@ -1,0 +1,9 @@
+#SOMMATORE A 2 BIT DI INGRESSO (2 INGRESSI)
+
+.model SUM2b_1
+.inputs A1 A0 B1 B0 CIN
+.outputs O1 O0 COUT
+.subckt SOMMATORE1b A=A0 B=B0 CIN=CIN O=O0 COUT=C0
+.subckt SOMMATORE1b A=A1 B=B1 CIN=C0 O=O1 COUT=COUT
+.search SOMMATORE(singolo).blif
+.end

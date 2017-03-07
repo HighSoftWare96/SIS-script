@@ -1,0 +1,10 @@
+#rappresentazione segnale 11
+
+.model CONST11
+.outputs O1 O0
+.subckt CONST1 O=O1
+.subckt CONST1 O=O0
+
+.search CONST0.blif
+.search CONST1.blif
+.end

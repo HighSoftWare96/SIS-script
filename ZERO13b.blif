@@ -1,0 +1,22 @@
+# 0000000000000 (2) -> 0 (10)
+.model ZERO13b
+.outputs O12 O11 O10 O9 O8 O7 O6 O5 O4 O3 O2 O1 O0
+.subckt CONST0 O=O12
+.subckt CONST0 O=O11
+.subckt CONST0 O=O10
+.subckt CONST0 O=O9
+.subckt CONST0 O=O8
+.subckt CONST0 O=O7
+.subckt CONST0 O=O6
+.subckt CONST0 O=O5
+.subckt CONST0 O=O4
+.subckt CONST0 O=O3
+.subckt CONST0 O=O2
+.subckt CONST0 O=O1
+.subckt CONST0 O=O0
+
+.search CONST0.blif
+.search CONST1.blif
+.end
+
+

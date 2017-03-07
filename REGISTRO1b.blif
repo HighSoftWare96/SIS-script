@@ -1,0 +1,9 @@
+# registro singolo da un bit, da utilizzare come modello singolo 
+# per i registri a più ingressi
+
+.model REGISTRO
+.inputs I 
+.outputs O
+.latch I O re NIL 0
+
+.end
